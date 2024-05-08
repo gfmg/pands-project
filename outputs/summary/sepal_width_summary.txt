@@ -1,0 +1,10 @@
+Summary for column 'sepal_width':
+count    150.000000
+mean       3.054000
+std        0.433594
+min        2.000000
+25%        2.800000
+50%        3.000000
+75%        3.300000
+max        4.400000
+Name: sepal_width, dtype: float64

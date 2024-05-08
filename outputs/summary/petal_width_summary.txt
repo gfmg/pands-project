@@ -1,0 +1,10 @@
+Summary for column 'petal_width':
+count    150.000000
+mean       1.198667
+std        0.763161
+min        0.100000
+25%        0.300000
+50%        1.300000
+75%        1.800000
+max        2.500000
+Name: petal_width, dtype: float64

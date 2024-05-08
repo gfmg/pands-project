@@ -1,0 +1,6 @@
+Summary for column 'class':
+count             150
+unique              3
+top       Iris-setosa
+freq               50
+Name: class, dtype: object
