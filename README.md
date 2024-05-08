@@ -1,5 +1,5 @@
 <h1 align=center><b>2024 Programming and Scripting</b></h1>
-<h1 align=center>Analysis of the Fisher's Iris data set :flower</h1>
+<h1 align=center>Analysis of the Fisher's Iris data set :hibiscus:</h1>
 <h3 align=center>Guillermo F. Martin Gonzalez</h3>
 
 This repository contains the outputs requested for the 2024 course <u>Programming and Scripting</u> as part of the Higher Diploma in Science in Data Analytics provided by the Atlantic Technological University. All code, text and analysis presented in this repository were developed by Guillermo F. Martin Gonzalez. 
