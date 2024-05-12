@@ -21,7 +21,9 @@ The Iris dataset contains a total of 150 rows contining the measurements in mili
 </figure><br>
 
 <p> This repository contains two main files:  
-- analysis.py file: code to produce different plots to better understand the datasets, a summary of the dataset, differences across species and potential relationship between biological traits (results stored in the outputs folder)
-- The Jupiter notebook contains a further discussion of the figures and potential ideas for further statistical analysis.
+  <ul>
+   <li>analysis.py file: code to produce different plots to better understand the datasets, a summary of the dataset, differences across species and potential relationship between biological traits (results stored in the outputs folder)</li>
+   <li>The Jupiter notebook contains a further discussion of the figures and potential ideas for further statistical analysis.</li>
+ </ul>
 </p> 
 
