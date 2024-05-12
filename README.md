@@ -16,6 +16,8 @@ In this README you will find a brief description in my own words about the Fishe
     </figcaption>
 </figure>
 
+<br>
+
 <p> This repository contains mainly two main files:  
 
 - analysis.py file: code to produce different plots to better understand the datasets, a summary of the dataset, differences across species and potential relationship between biological traits (results stored in the outputs folder)
