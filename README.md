@@ -18,7 +18,7 @@ The Iris dataset contains a total of 150 rows contining the measurements in mili
     <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*YYiQed4kj_EZ2qfg_imDWA.png" alt="Alternative text">
     <figcaption>Figure 1: Iris species in the Irish dataset, with reference to the biological traits being measured. Downloaded <a href="https://peaceadegbite1.medium.com/iris-flower-classification-60790e9718a1">here</a>
     </figcaption>
-</figure><br>
+</figure><br />
 
 <p> This repository contains two main files:  
   <ul>
