@@ -11,11 +11,18 @@
 @Desc    :   Guillermo Martin projects for the 2024 Programming and Scripting course
 '''
  
- # Libraries
+# Libraries
 import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+#Common Plot aesthetics
+sns.set_theme(style="darkgrid",
+              palette="colorblind")
+sns.set_context(rc={"axes.labelsize":12,
+                    "axes.titlesize":14})
+
 
 #Creating directories for outputs: 
 dirs = ['./outputs','./outputs/summary','./outputs/figures']
@@ -50,25 +57,40 @@ for c in range(dat.shape[1]):
    if not dat.columns[c] == "class": #Dont make figures for class column
     
     fig, ax = plt.subplots(1, 2, figsize=(12, 6))  # Create a figure with two subplots
-    plt.suptitle(f"Data visualization for {dat.columns[c]}")
-    #ax[0].set_title("Histogram")
-    #ax[1].set_title("Boxplot")
+    plt.suptitle(f"Data visualization for {dat.columns[c]}",fontsize=18)
+
     sns.histplot(data=dat, x=dat.columns[c], hue="class", element="poly", ax=ax[0])
-    sns.boxplot(data=dat, y=dat.columns[c], x="class", hue="class", ax=ax[1])
+    sns.boxplot(data=dat, y=dat.columns[c], x="class", hue="class", ax=ax[1],
+                flierprops=dict(marker='o',markeredgecolor='red',markerfacecolor='red')) # Outlier colour reference: https://stackoverflow.com/questions/29647145/setting-flier-outlier-style-in-seaborn-boxplot-is-ignored
    
     plt.savefig(os.path.join(dirs[2],f"Data checks_{dat.columns[c]}.png")) 
     plt.close()  
 
 
 #Scatter plots of each pair
-fig, axs = plt.subplots(3, 2, figsize=(12, 12))
+fig, ax = plt.subplots(3, 2, figsize=(8, 8))
 
 cols = dat.columns[0:4]
 
-for i in range(len(dat.columns[0:4])):
-    for j in range(i + 1, len(dat.columns[0:4])):
-        sns.scatterplot(data=dat, x=dat.columns[i], y=dat.columns[j],hue="class", ax=axs[i, j - 1])
-        axs[i, i + j - 1].set_title(f"{dat.columns[i]} vs {dat.columns[j]}")
+counter = 0
 
-plt.tight_layout()
-plt.show()
+handles = []
+labels = []
+
+for i in range(len(cols)):
+    for j in range(i + 1, len(cols)):
+        row = counter//2
+        col= counter % 2
+        
+        p1=sns.scatterplot(data=dat, x=dat.columns[i], y=cols[j],hue="class", ax=ax[row, col])
+
+        handles, labels = p1.get_legend_handles_labels() #Single legend reference: https://stackoverflow.com/questions/9834452/how-do-i-make-a-single-legend-for-many-subplots
+
+        p1.get_legend().remove()
+
+        counter +=1
+
+fig.tight_layout()
+fig.legend(handles,labels,bbox_to_anchor=(0.5, 0),loc='lower center', ncol=3)
+fig.savefig(os.path.join(dirs[2],f"Scatter pair plots.png"))
+#fig.show()
