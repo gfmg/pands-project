@@ -11,7 +11,7 @@ In this README you will find a brief description in my own words about the Fishe
 <h1 align=left>Description of the Fisher's Iris data set</h1>
 
 <p>
-The Iris dataset contains a total of 150 rows contining the measurements in milimiters of the sepal length, sepal width, petal length, and petal width of four different Iris species, a flowering plant belonging to the Iridaceae family with 310 species accepted species (<a href="https://en.wikipedia.org/wiki/Iris_(plant)">Wikipedia, 2024</a>)
+The Iris dataset contains a total of 150 rows contining the measurements in centimeters of the sepal length, sepal width, petal length, and petal width of four different Iris species, a flowering plant belonging to the Iridaceae family with 310 species accepted species (<a href="https://en.wikipedia.org/wiki/Iris_(plant)">Wikipedia, 2024</a>)
 </p>
 
 <figure align=center style="margin-bottom: 20px;">
