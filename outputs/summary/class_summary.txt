@@ -4,3 +4,4 @@ unique              3
 top       Iris-setosa
 freq               50
 Name: class, dtype: object
+Contains NA values: False

@@ -47,10 +47,11 @@ dat = pd.read_csv('./data/iris.data',
 
 # Brief summary of the data for each column saved into a single .txt file
 for c in dat.columns: #Iterate over every column
-    file_name = f"{c}_summary.txt" # Define file name to be saved as ("columnName_summary.txt")
-    with open(os.path.join(dirs[1],file_name), 'w') as f: #Write each filename. dirs[1] is the directory of the summaries
-        f.write(f"Summary for column '{c}':\n") # Title of the file
-        f.write(f"{dat[c].describe()}\n") #dat. describe (brief description of each colum (e.g count, mean, std...))
+   file_name = f"{c}_summary.txt" # Define file name to be saved as ("columnName_summary.txt")
+   with open(os.path.join(dirs[1],file_name), 'w') as f: #Write each filename. dirs[1] is the directory of the summaries
+    f.write(f"Summary for column '{c}':\n") # Title of the file
+    f.write(f"{dat[c].describe()}\n") #dat.describe (brief description of each colum (e.g count, mean, std...))
+    f.write(f"Contains NA values: {dat[c].isna().any()}\n") #Check if there is NA's in the column
 
 # Making the data check plots
 for c in range(dat.shape[1]):

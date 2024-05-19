@@ -8,3 +8,4 @@ min        2.000000
 75%        3.300000
 max        4.400000
 Name: sepal_width, dtype: float64
+Contains NA values: False

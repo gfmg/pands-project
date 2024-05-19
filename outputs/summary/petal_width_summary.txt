@@ -8,3 +8,4 @@ min        0.100000
 75%        1.800000
 max        2.500000
 Name: petal_width, dtype: float64
+Contains NA values: False
